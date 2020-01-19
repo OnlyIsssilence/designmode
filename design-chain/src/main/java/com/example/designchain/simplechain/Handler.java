@@ -1,4 +1,4 @@
-package com.example.designchain.chain;
+package com.example.designchain.simplechain;
 
 /**
  * Copyright 2019 OnlySilence, Inc. All rights reserved.
