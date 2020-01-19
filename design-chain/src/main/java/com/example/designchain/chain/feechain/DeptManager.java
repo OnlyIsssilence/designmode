@@ -1,4 +1,4 @@
-package com.example.designchain.feechain;
+package com.example.designchain.chain.feechain;
 
 /**
  * Copyright 2019 OnlySilence, Inc. All rights reserved.

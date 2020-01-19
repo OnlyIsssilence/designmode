@@ -1,30 +1,30 @@
-package com.example.designchain.feechain;
+package com.example.designchain.chain.feechain;
 
 /**
  * Copyright 2019 OnlySilence, Inc. All rights reserved.
  *
  * @Author: MuYa
  * @Date: 2020/1/16
- * @Time: 10:28
+ * @Time: 10:25
  * @Description:
  */
-public class GeneralManager extends Handler {
+public class ProjectManager extends Handler {
 
     @Override
     public String handleFeeRequest(String user, double fee) {
 
         String str = "";
-        //总经理的权限很大，只要请求到了这里，他都可以处理
-        if (fee >= 1000) {
+        //项目经理权限比较小，只能在500以内
+        if (fee < 500) {
             //为了测试，简单点，只同意张三的请求
             if ("张三".equals(user)) {
-                str = "成功：总经理同意【" + user + "】的聚餐费用，金额为" + fee + "元";
+                str = "成功：项目经理同意【" + user + "】的聚餐费用，金额为" + fee + "元";
             } else {
                 //其他人一律不同意
-                str = "失败：总经理不同意【" + user + "】的聚餐费用，金额为" + fee + "元";
+                str = "失败：项目经理不同意【" + user + "】的聚餐费用，金额为" + fee + "元";
             }
         } else {
-            //如果还有后继的处理对象，继续传递
+            //超过500，继续传递给级别更高的人处理
             if (getSuccessor() != null) {
                 return getSuccessor().handleFeeRequest(user, fee);
             }

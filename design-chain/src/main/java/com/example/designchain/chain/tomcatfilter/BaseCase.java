@@ -1,4 +1,4 @@
-package com.example.designchain.tomcatfilter;
+package com.example.designchain.chain.tomcatfilter;
 
 /**
  * Copyright 2019 OnlySilence, Inc. All rights reserved.

@@ -1,4 +1,4 @@
-package com.example.designchain.tomcatfilter;
+package com.example.designchain.chain.tomcatfilter;
 
 /**
  * Copyright 2019 OnlySilence, Inc. All rights reserved.
@@ -8,10 +8,10 @@ package com.example.designchain.tomcatfilter;
  * @Time: 11:51
  * @Description:
  */
-public class OneCase implements BaseCase {
+public class TwoCase implements BaseCase {
     @Override
     public void doSomething(String input, BaseCase baseCase) {
-        if ("1".equals(input)) {
+        if ("2".equals(input)) {
             // TODO do something
             System.out.println(getClass().getName());
             return;
